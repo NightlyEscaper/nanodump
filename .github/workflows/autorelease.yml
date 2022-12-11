@@ -89,7 +89,8 @@ jobs:
 
     - name: Build Package
       run: |
-        make -f Makefile.mingw
+        ls
+        make
         rm -f ./compiled/.gitkeep
         cat extension.json | jq ".version |= \"${{ needs.sync_latest_from_upstream.outputs.tag || 'v0.0.0' }}\"" > ./compiled/extension.json
         cp LICENSE ./compiled/LICENSE
