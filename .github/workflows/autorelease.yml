@@ -114,6 +114,7 @@ jobs:
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         prerelease: false
+        automatic_release_tag: ${{ needs.sync_latest_from_upstream.outputs.tag || 'v0.0.0' }}
         files: |
           ./nanodump.minisig
           ./nanodump.tar.gz
