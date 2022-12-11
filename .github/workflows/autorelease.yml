@@ -34,7 +34,7 @@ jobs:
         git config --global user.name "Your Name"
         git rm Makefile
         git rm restore_signature.sh
-        git commit 
+        git commit -m "Resolve CONFLICT."
 
     # REQUIRED step
     # Step 2: run the sync action
